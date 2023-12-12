@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import "../../styles/about-section.css";
+import { Link } from "react-router-dom";
 import aboutImg from "../../assets/all-images/cars-img/bmw-offer.png";
 
 const AboutSection = ({ aboutClass }) => {
@@ -10,22 +11,17 @@ const AboutSection = ({ aboutClass }) => {
       style={
         aboutClass === "aboutPage"
           ? { marginTop: "0px" }
-          : { marginTop: "280px" }
+          : { marginTop: "0px" }
       }
     >
       <Container>
         <Row>
           <Col lg="6" md="6">
             <div className="about__section-content">
-              <h4 className="section__subtitle">About Us</h4>
-              <h2 className="section__title">Welcome to car rent service</h2>
+              <h4 className="section__subtitle">About Us :</h4>
+              <h2 className="section__title">Introduction to the BRAMA</h2>
               <p className="section__description">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptatum blanditiis esse accusantium dignissimos labore
-                laborum. Veniam, corporis mollitia temporibus, in quaerat vero
-                deleniti amet dolorem repudiandae, pariatur nam dolore! Impedit
-                neque sit ad temporibus quam similique dolor ipsam praesentium
-                sunt.
+              The  Bangladesh Refrigation & Airconditioning  Merchents Association(BRAMA) is the apex trade organization of Bangladesh playing a pivotal role in consultative and advisory capacity, safeguarding the interest of...
               </p>
 
               <div className="about__section-item d-flex align-items-center">
@@ -51,6 +47,9 @@ const AboutSection = ({ aboutClass }) => {
                   amet.
                 </p>
               </div>
+              <button className="btn reserve__btn  mt-4">
+              <Link to="/cars"> For Details</Link>
+            </button>
             </div>
           </Col>
 

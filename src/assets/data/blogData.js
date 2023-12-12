@@ -6,7 +6,7 @@ import img03 from "../all-images/blog-img/blog-3.jpg";
 const blogData = [
   {
     id: 1,
-    title: "The best way to drive cars",
+    title: "The best way to",
     author: "Muhib",
     date: "12 Dec, 2020",
     time: "9pm",

@@ -11,13 +11,16 @@ const navLinks = [
   },
   {
     path: "/about",
-    display: "About",
+    display: "About BRAMA",
   },
   {
-    path: "/cars",
-    display: "Cars",
+    path: "/secretariat",
+    display: "Secretariat",
   },
-
+{
+  path: "/committees",
+  display: "Committees",
+},
   {
     path: "/blogs",
     display: "Blog",
@@ -39,7 +42,7 @@ const Header = () => {
       <div className="header__top">
         <Container>
           <Row>
-            <Col lg="6" md="6" sm="6">
+            <Col lg="4" md="6" sm="6">
               <div className="header__top__left">
                 <span>Need Help?</span>
                 <span className="header__top__help">
@@ -48,8 +51,9 @@ const Header = () => {
               </div>
             </Col>
 
-            <Col lg="6" md="6" sm="6">
-              <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
+            <Col lg="8" md="6" sm="6">
+              <div className="header__top__right d-flex align-items-center justify-content-end gap-4">
+             
                 <Link to="#" className=" d-flex align-items-center gap-1">
                   <i class="ri-login-circle-line"></i> Login
                 </Link>
@@ -73,36 +77,26 @@ const Header = () => {
                   <Link to="/home" className=" d-flex align-items-center gap-2">
                     <i class="ri-car-line"></i>
                     <span>
-                      Rent Car <br /> Service
+                     BRAMA <br /> LOGO
                     </span>
                   </Link>
                 </h1>
               </div>
             </Col>
 
-            <Col lg="3" md="3" sm="4">
+            <Col lg="6" md="6" sm="4">
               <div className="header__location d-flex align-items-center gap-2">
                 <span>
                   <i class="ri-earth-line"></i>
                 </span>
                 <div className="header__location-content">
-                  <h4>Bangladesh</h4>
-                  <h6>Sylhet City, Bangladesh</h6>
+                  <h4> Bangladesh Refrigation & Airconditioning  Merchents Association</h4>
                 </div>
               </div>
             </Col>
+            
 
-            <Col lg="3" md="3" sm="4">
-              <div className="header__location d-flex align-items-center gap-2">
-                <span>
-                  <i class="ri-time-line"></i>
-                </span>
-                <div className="header__location-content">
-                  <h4>Sunday to Friday</h4>
-                  <h6>10am - 7pm</h6>
-                </div>
-              </div>
-            </Col>
+           
 
             <Col
               lg="2"

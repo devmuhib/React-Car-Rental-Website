@@ -1,70 +1,39 @@
-import React, { useState, useEffect } from "react";
-import axios from 'axios';
+import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
+import CarItem from "../components/UI/CarItem";
+import carData from "../assets/data/carData";
 
 const CarListing = () => {
-  const [cars, setCars] = useState([]);
-
-  useEffect(() => {
-    loadCars();
-  }, []);
-
-  const loadCars = async () => {
-    try {
-      const result = await axios.get("http://localhost:8080/cars");
-      setCars(result.data);
-    } catch (error) {
-      console.error("Error fetching data: ", error);
-      // Handle the error appropriately in your application
-    }
-  };
-
   return (
-    <section>
-      <Helmet title="Car Listing" />
+    <Helmet title="Cars">
       <CommonSection title="Car Listing" />
 
-      <Container>
-        <Row>
-          <Col lg="12">
-            <div className="mb-5">
-              {/* Additional components or sorting features can be added here */}
-            </div>
-          </Col>
-        </Row>
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12">
+              <div className=" d-flex align-items-center gap-3 mb-5">
+                <span className=" d-flex align-items-center gap-2">
+                  <i class="ri-sort-asc"></i> Sort By
+                </span>
 
-        <Row>
-          <Col lg="12">
-            <table className="table">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>model</th>
-                  <th>year</th>
-                  <th>PlateId</th>
-                  <th>Status</th>
-                  {/* Add more table headers based on the Car object properties */}
-                </tr>
-              </thead>
-              <tbody>
-                {cars.map((car, index) => (
-                  <tr key={car.carId}>
-                    <td>{car.carId}</td>
-                    <td>{car.model}</td>
-                    <td>{car.year}</td>
-                    <td>{car.plateId}</td>
-                    <td>{car.status}</td>
-                    {/* Add more table data based on the Car object properties */}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Col>
-        </Row>
-      </Container>
-    </section>
+                <select>
+                  <option>Select</option>
+                  <option value="low">Low to High</option>
+                  <option value="high">High to Low</option>
+                </select>
+              </div>
+            </Col>
+
+            {carData.map((item) => (
+              <CarItem item={item} key={item.id} />
+            ))}
+          </Row>
+        </Container>
+      </section>
+    </Helmet>
   );
 };
 

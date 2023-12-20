@@ -5,12 +5,10 @@ import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
 
 const navLinks = [
-
   {
     path: "/home",
     display: "Home",
   },
-
   {
     path: "/about",
     display: "About",
@@ -52,11 +50,14 @@ const Header = () => {
 
             <Col lg="6" md="6" sm="6">
               <div className="header__top__right d-flex align-items-center justify-content-end gap-3">
-                <Link to="#" className=" d-flex align-items-center gap-1">
+                <Link to="/login" className=" d-flex align-items-center gap-1">
                   <i class="ri-login-circle-line"></i> Login
                 </Link>
 
-                <Link to="#" className=" d-flex align-items-center gap-1">
+                <Link
+                  to="/register"
+                  className=" d-flex align-items-center gap-1"
+                >
                   <i class="ri-user-line"></i> Register
                 </Link>
               </div>
@@ -88,8 +89,8 @@ const Header = () => {
                   <i class="ri-earth-line"></i>
                 </span>
                 <div className="header__location-content">
-                  <h4>Egypt</h4>
-                  <h6>Alexandria, Egypt</h6>
+                  <h4>Bangladesh</h4>
+                  <h6>Sylhet City, Bangladesh</h6>
                 </div>
               </div>
             </Col>

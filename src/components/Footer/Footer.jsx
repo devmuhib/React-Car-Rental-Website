@@ -72,10 +72,10 @@ const Footer = () => {
           <Col lg="3" md="4" sm="6">
             <div className="mb-4">
               <h5 className="footer__link-title mb-4">Head Office</h5>
-              <p className="office__info">123 Alexandria, Ibrahimya, Egypt</p>
+              <p className="office__info">123 Zindabazar, Sylhet, Bangladesh</p>
               <p className="office__info">Phone: +0995345875365</p>
 
-              <p className="office__info">Email: aaaaaa@gmail.com</p>
+              <p className="office__info">Email: muhib5532@gmail.com</p>
 
               <p className="office__info">Office Time: 10am - 7pm</p>
             </div>
@@ -98,7 +98,7 @@ const Footer = () => {
             <div className="footer__bottom">
               <p className="section__description d-flex align-items-center justify-content-center gap-1 pt-4">
                 <i class="ri-copyright-line"></i>Copyright {year}, Developed by
-                Saad eldin, Ahmed Abdelwahed, Morogue ghazal. All rights reserved.
+                Muhibur Rahman. All rights reserved.
               </p>
             </div>
           </Col>

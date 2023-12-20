@@ -5,10 +5,12 @@ import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
 
 const navLinks = [
+
   {
     path: "/home",
     display: "Home",
   },
+
   {
     path: "/about",
     display: "About",
@@ -86,8 +88,8 @@ const Header = () => {
                   <i class="ri-earth-line"></i>
                 </span>
                 <div className="header__location-content">
-                  <h4>Bangladesh</h4>
-                  <h6>Sylhet City, Bangladesh</h6>
+                  <h4>Egypt</h4>
+                  <h6>Alexandria, Egypt</h6>
                 </div>
               </div>
             </Col>
